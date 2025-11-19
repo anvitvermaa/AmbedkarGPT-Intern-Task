@@ -1,0 +1,18 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+venv/
+
+# Environment variables
+.env
+
+# Vector Database (ChromaDB creates a local folder, usually named 'chroma_db' or similar)
+chroma_db/
+output/chroma/
+
+# OS files
+.DS_Store
+
+# Editor files
+.vscode/
+.idea/
