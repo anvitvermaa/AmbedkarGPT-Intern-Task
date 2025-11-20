@@ -25,7 +25,7 @@ This decision was made to strictly adhere to the assignment's request for a "Com
 ## Setup & Installation
 
 1. Clone the repository and install dependencies:
-   git clone https://github.com/anvitvermaa/AmbedkarGPT-Intern-Task.git
+   git clone 
    cd AmbedkarGPT-Intern-Task
    python3 -m venv venv
    source venv/bin/activate
