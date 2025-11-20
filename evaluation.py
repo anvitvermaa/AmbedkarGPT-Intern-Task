@@ -69,7 +69,7 @@ def calculate_text_metrics(generated_answer, ground_truth, embedding_model):
     return rouge_l, bleu, similarity
 
 def run_evaluation_for_chunk_size(chunk_size, questions, embedding_model):
-    print(f"\n--- 🔄 Testing Chunk Strategy: {chunk_size} chars ---")
+    print(f"\n---  Testing Chunk Strategy: {chunk_size} chars ---")
     
     db_path = f"output/chroma_{chunk_size}"
     if os.path.exists(db_path):
@@ -126,7 +126,7 @@ def run_evaluation_for_chunk_size(chunk_size, questions, embedding_model):
             print(f"  [Error Q{item['id']}]: {e}")
 
     avg_hit = np.mean([r['hit_rate'] for r in results])
-    print(f"👉 Result for {chunk_size}: Avg Hit Rate={avg_hit:.2f}")
+    print(f" Result for {chunk_size}: Avg Hit Rate={avg_hit:.2f}")
     
     return {"chunk_size": chunk_size, "avg_hit_rate": avg_hit, "detailed_results": results}
 
@@ -146,7 +146,7 @@ def main():
     with open(OUTPUT_FILE, 'w') as f:
         json.dump(final_report, f, indent=4)
         
-    print(f"\n✅ Evaluation Complete! File saved to {OUTPUT_FILE}")
+    print(f"\n Evaluation Complete! File saved to {OUTPUT_FILE}")
 
 if __name__ == "__main__":
     main()
